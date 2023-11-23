@@ -15,6 +15,5 @@ def main():
     print(model_manager.make_predictions(model=model))
     print(model_manager.make_single_prediction(model=model,single_message="Free entry in 2 a wkly comp to win FA Cup final tkts 21st May 2005. Text FA to 87121 to receive entry question(std txt rate)T&C's apply 08452810075over18's"))
 
-
 if __name__ == "__main__":
     main()
