@@ -4,7 +4,7 @@ import h2o
 from h2o.automl import H2OAutoML
 
 
-class Data_Manager:
+class Model_Manager:
     def __init__(self, file=None):
         self._data_set = (
             self._read_data_set_from_file(file) if file is not None else None
