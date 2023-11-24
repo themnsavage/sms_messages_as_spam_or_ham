@@ -37,14 +37,10 @@ class Model_Manager:
 
     def _create_more_features(self, df):
         df["Message_Length"] = df["Message"].apply(self._message_length)
-        df["Word_Count"] = df["Message"].apply(self._count_of_words)
-        df["Character_Count"] = df["Message"].apply(self._count_of_characters)
         df["Uppercase_Count"] = df["Message"].apply(self._count_uppercase_words)
         df["Count_Punctuations"] = df["Message"].apply(self._count_punctuation)
         df["URL_Count"] = df["Message"].apply(self._count_urls)
         df["Digit_Count"] = df["Message"].apply(self._count_digits)
-        df["Special_Char_Count"] = df["Message"].apply(self._count_special_characters)
-        df["Sentiment_Score"] = df["Message"].apply(self._sentiment_score)
         
         return df
     
