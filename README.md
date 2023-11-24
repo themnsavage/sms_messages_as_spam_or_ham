@@ -11,7 +11,7 @@ Use an AutoML tool or library to develop a machine learning model on a given dat
 - validate the performance of the model using the testing data
 
 ## results:
-- The model exhibits exceptional predictive accuracy, as evidenced by its low Mean Squared Error (MSE) of 0.01637 and Root Mean Squared Error (RMSE) of 0.12796, indicating precise predictions. The LogLoss value at 0.07033 suggests high confidence in these predictions, and the Mean Per-Class Error of 0.05704 demonstrates balanced performance across classes.
+The model exhibits exceptional predictive accuracy, as evidenced by its low Mean Squared Error (MSE) of 0.01637 and Root Mean Squared Error (RMSE) of 0.12796, indicating precise predictions. The LogLoss value at 0.07033 suggests high confidence in these predictions, and the Mean Per-Class Error of 0.05704 demonstrates balanced performance across classes.
 
 Its discriminatory power is further highlighted by an Area Under the ROC Curve (AUC) of 0.9891 and an Area Under the Precision-Recall Curve (AUCPR) of 0.9676, both exceptionally high values. This implies a superior ability to differentiate between classes and accurately identify positive cases.
 
