@@ -2,7 +2,7 @@
 Use an AutoML tool or library to develop a machine learning model on a given dataset.
 
 ## Preprocessing:
-- The dataset I used was just a label(`spam` or `ham`) and the message. Due to only having message as a feature to train the model. I had to create new feature with the message feature like which were Message_Length, URL_Count, Uppercase_Count, etc. Then after making these new feature I a pearson correlation to see which features I should use or not use when training my module. Then I split the data into two sets training and testing.
+The dataset I used was just a label(`spam` or `ham`) and the message. Due to only having message as a feature to train the model. I had to create new feature with the message feature like which were Message_Length, URL_Count, Uppercase_Count, etc. Then after making these new feature I a pearson correlation to see which features I should use or not use when training my module. Then I split the data into two sets training and testing.
 
 ## AutoML:
 - I use h2o as my autoML tool of choice, mostly due to it being very ease to use and wide Range of Algorithms.
