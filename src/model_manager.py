@@ -8,6 +8,14 @@ from h2o.automl import H2OAutoML
 
 class Model_Manager:
     def __init__(self, file=None):
+        self._chosen_features = [
+            "Message",
+            "Message_Length",
+            "Uppercase_Count",
+            "Count_Punctuations",
+            "URL_Count",
+            "Digit_Count",
+        ]
         self._data_set = (
             self._process_data_set_from_file(file) if file is not None else None
         )
@@ -18,15 +26,6 @@ class Model_Manager:
                 self._label_train,
                 self._label_test,
             ) = self._split_data_into_training_and_testing_sets()
-        
-        self._chosen_features = [
-            "Message",
-            "Message_Length",
-            "Uppercase_Count",
-            "Count_Punctuations",
-            "URL_Count",
-            "Digit_Count",
-        ]
 
     def _process_data_set_from_file(self, file):
         df = pd.read_csv(file, sep="\t", header=None, names=["Label", "Message"])
@@ -96,19 +95,8 @@ class Model_Manager:
         return self._data_set.head()
 
     def _split_data_into_training_and_testing_sets(self):
-        feature_columns = [
-            "Message",
-            "Message_Length",
-            "Word_Count",
-            "Character_Count",
-            "Uppercase_Count",
-            "Count_Punctuations",
-            "URL_Count",
-            "Digit_Count",
-            "Sentiment_Score",
-        ]
         return train_test_split(
-            self._data_set[feature_columns],
+            self._data_set[self._chosen_features],
             self._data_set["Label"],
             test_size=0.2,
             random_state=42,
