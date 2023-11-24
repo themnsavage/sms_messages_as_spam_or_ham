@@ -20,8 +20,13 @@ The Gini coefficient at 0.9782 reinforces the model's strong discriminatory capa
 Overall, the model demonstrates a remarkable balance of accuracy, precision, and class differentiation, making it highly effective for its intended application.
 
 ## process:
-- I would get data and create new features with existing data
-- 
+- Get data set and create new features with existing data
+- Split data into training and testing set
+- pearson correlation on feature to see which one to use
+- train model with training data
+- validate performace of model with testing data
+- save model for later use
+  
 ## Install python libraries:
 - run make command `make install`
 
