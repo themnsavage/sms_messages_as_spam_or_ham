@@ -41,8 +41,6 @@ Overall, the model demonstrates a remarkable balance of accuracy, precision, and
 ## Dataset Selection & Preprocessing:
 - The dataset I used just contain a label(spam or ham) and the message. Due to only having message as a feature to train the model I decided to generate new features with the message feature (ex: Message_Length, URL_Count, Uppercase_Count, etc). Then after making these new feature I use a pearson correlation to see which features I should use or not use when training my module. Then I split the data into two sets training and testing.
 
-- pearson correlation: 
-
 ## AutoML Implementation:
 - The AutoML tool I used was the h2o python library. Using this tool I first train a model using my training data set. After this I would then evaluate the performance of the model, using the testing data set. With the evaluation I would make decisions on how to make the ML model better. I also would save the model using the h2o library for later use.
 
